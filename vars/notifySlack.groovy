@@ -8,6 +8,6 @@ def call(String buildResult,String stageName) {
     slackSend channel: 'devops',color: 'danger', message: "stageName within ${JOB_NAME} with buildnumber ${BUILD_NUMBER} has failed, check ${BUILD_URL}", teamDomain: 'projectdevops', tokenCredentialId: 'Slackcred'
   }
   else {
-      slackSend channel: 'devops',color: 'warning', message: "status for ${JOB_NAME} with buildnumber ${BUILD_NUMBER} unclear, teamDomain: 'projectdevops', tokenCredentialId: 'Slackcred'
+      slackSend channel: 'devops',color: 'warning', message: "status for ${JOB_NAME} with buildnumber ${BUILD_NUMBER} unclear", teamDomain: 'projectdevops', tokenCredentialId: 'Slackcred'
   }
 }
